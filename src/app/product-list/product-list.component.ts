@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { products } from '../product';
 
 @Component({
   selector: 'app-product-list',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.scss']
+  styleUrls: ['./product-list.component.scss'],
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent {
+  products = products;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  share() {
+    window.alert('The product has been shared!');
   }
-
 }
